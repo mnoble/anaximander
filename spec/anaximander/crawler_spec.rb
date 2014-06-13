@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Cartographer::Crawler do
+describe Anaximander::Crawler do
   let(:link)        { "http://example.com" }
   subject!(:crawler) { described_class.new(link) }
 
@@ -15,14 +15,14 @@ describe Cartographer::Crawler do
   end
 
   it "visits links breadth-first" do
-    allow_any_instance_of(Cartographer::Page).to receive(:open).and_return("")
+    allow_any_instance_of(Anaximander::Page).to receive(:open).and_return("")
 
-    root     = Cartographer::Page.new("http://example.com")
-    pricing  = Cartographer::Page.new("http://example.com/pricing")
-    features = Cartographer::Page.new("http://example.com/features")
+    root     = Anaximander::Page.new("http://example.com")
+    pricing  = Anaximander::Page.new("http://example.com/pricing")
+    features = Anaximander::Page.new("http://example.com/features")
 
-    allow(Cartographer::Page).to receive(:new).with("http://example.com/pricing").and_return(pricing)
-    allow(Cartographer::Page).to receive(:new).with("http://example.com/features").and_return(features)
+    allow(Anaximander::Page).to receive(:new).with("http://example.com/pricing").and_return(pricing)
+    allow(Anaximander::Page).to receive(:new).with("http://example.com/features").and_return(features)
 
     allow(root).to receive_messages(links: ["http://example.com/pricing", "http://example.com/features"])
     allow(pricing).to receive_messages(links: ["http://example.com/features"])

@@ -1,4 +1,4 @@
-module Cartographer
+module Anaximander
   module Discovery
     class Assets
       include Enumerable

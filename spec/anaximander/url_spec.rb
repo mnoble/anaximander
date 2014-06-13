@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Cartographer::Url do
+describe Anaximander::Url do
   it "exposes the scheme and host as base" do
     base = described_class.new("http://example.com/foo/bar?baz=1").base
     expect(base).to eq "http://example.com"

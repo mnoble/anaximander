@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Cartographer::Page do
+describe Anaximander::Page do
   let(:html) { File.read(File.expand_path("../../data/page.html", __FILE__)) }
   let(:page) { described_class.new("http://example.com") }
 
@@ -9,12 +9,12 @@ describe Cartographer::Page do
   end
 
   it "has unique links" do
-    expect(Cartographer::Discovery::Links).to receive(:new).with(an_instance_of(Nokogiri::HTML::Document), "http://example.com")
+    expect(Anaximander::Discovery::Links).to receive(:new).with(an_instance_of(Nokogiri::HTML::Document), "http://example.com")
     page.links
   end
 
   it "has assets" do
-    expect(Cartographer::Discovery::Assets).to receive(:new).with(an_instance_of(Nokogiri::HTML::Document))
+    expect(Anaximander::Discovery::Assets).to receive(:new).with(an_instance_of(Nokogiri::HTML::Document))
     page.assets
   end
 

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Cartographer::Discovery::Links do
+describe Anaximander::Discovery::Links do
   let(:html)  { Nokogiri::HTML(open("spec/data/page.html")) }
   let(:links) { described_class.new(html, "http://example.com/") }
 

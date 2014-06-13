@@ -1,17 +1,17 @@
-module Cartographer
+module Anaximander
   module Discovery
 
     # Collection of internal links on the given page. 
     #
     # == Relative Paths
     #
-    # `Cartographer::Discovery::Links` converts all relative paths into absolute
+    # `Anaximander::Discovery::Links` converts all relative paths into absolute
     # paths using the base URL of the page being crawled.
     #
     #   # http://example.com
     #   <a href="/contact">Contact</a>
     #
-    #   Cartographer::Discovery::Links.new(Nokogiri::HTML(open("http://example.com")))
+    #   Anaximander::Discovery::Links.new(Nokogiri::HTML(open("http://example.com")))
     #   # => ["http://example.com/contact"]
     #
     # == Exclusions
@@ -23,7 +23,7 @@ module Cartographer
     #
     #   page = Nokogiri::HTML(open("http://example.com"))
     #
-    #   Cartographer::Discovery::Links.new(page)
+    #   Anaximander::Discovery::Links.new(page)
     #   # => ["http://www.iana.org/domains/example"]
     #
     class Links

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Cartographer::Renderer do
+describe Anaximander::Renderer do
   include Fakeout::SpecHelpers
 
   let(:child) { double(url: "http://example.com/foo", assets: ["/root.css", "/child.js"], children: []) }
@@ -42,12 +42,12 @@ describe Cartographer::Renderer do
   end
 
   it "draws an entire tree", :endtoend do
-    tree = Cartographer::Crawler.new("http://localhost:#{@port}/index.html")
+    tree = Anaximander::Crawler.new("http://localhost:#{@port}/index.html")
     tree.crawl
 
-    domain = Cartographer::Url.new(tree.root.url).base
+    domain = Anaximander::Url.new(tree.root.url).base
 
-    renderer = Cartographer::Renderer.new(tree.root, color: false)
+    renderer = Anaximander::Renderer.new(tree.root, color: false)
     renderer.draw
 
     expect(stdout).to eq <<-TREE

@@ -1,4 +1,4 @@
-module Cartographer
+module Anaximander
   class Error < StandardError; end
 
   # Raised when a page cannot be fetched.
@@ -10,7 +10,7 @@ module Cartographer
   #
   # == Errors
   #
-  # `Cartographer::Page` will raise a `PageNotAccessibleError` when the page cannot
+  # `Anaximander::Page` will raise a `PageNotAccessibleError` when the page cannot
   # be fetched for some reason. This is often due to it not existing (404), SSL
   # errors or infinite redirect loops.
   #
@@ -67,7 +67,7 @@ module Cartographer
     end
 
     def inspect
-      %(#<Cartographer::Page:#{object_id} url="#{url}">)
+      %(#<Anaximander::Page:#{object_id} url="#{url}">)
     end
   end
 end

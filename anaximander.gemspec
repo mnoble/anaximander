@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cartographer/version'
+require 'anaximander/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cartographer"
-  spec.version       = Cartographer::VERSION
+  spec.name          = "anaximander"
+  spec.version       = Anaximander::VERSION
   spec.authors       = ["Matte Noble"]
   spec.email         = ["me@mattenoble.com"]
   spec.summary       = %q{Web scraper that collects assets and links.}
@@ -25,6 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rack"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-autotest"
-  spec.add_development_dependency "pry"
   spec.add_development_dependency "fakeout"
 end

@@ -1,4 +1,4 @@
-module Cartographer
+module Anaximander
   class Url < SimpleDelegator
     include Comparable
 

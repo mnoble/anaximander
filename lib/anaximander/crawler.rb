@@ -1,4 +1,4 @@
-module Cartographer
+module Anaximander
   class Crawler
     attr_reader :root
 
@@ -20,12 +20,12 @@ module Cartographer
       @visited << link
 
       Page.new(link)
-    rescue Cartographer::PageNotAccessibleError
+    rescue Anaximander::PageNotAccessibleError
       nil
     end
 
     def logger
-      Cartographer.logger
+      Anaximander.logger
     end
   end
 end

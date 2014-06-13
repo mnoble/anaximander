@@ -1,13 +1,13 @@
 require "socket"
 require "net/http"
 require "fakeout/safe"
-require "cartographer"
+require "anaximander"
 
 RSpec.configure do |c|
   c.filter_run_excluding :endtoend
 
   c.before do
-    Cartographer.logger = false
+    Anaximander.logger = false
   end
 
   c.before :each, :endtoend do
