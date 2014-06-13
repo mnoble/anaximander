@@ -9,6 +9,7 @@ require "cartographer/version"
 require "cartographer/url"
 require "cartographer/page"
 require "cartographer/crawler"
+require "cartographer/renderer"
 require "cartographer/discovery/links"
 require "cartographer/discovery/assets"
 

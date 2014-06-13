@@ -1,5 +1,6 @@
 require "socket"
 require "net/http"
+require "fakeout/safe"
 require "cartographer"
 
 RSpec.configure do |c|
