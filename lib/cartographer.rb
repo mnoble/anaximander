@@ -1,5 +1,5 @@
+require "delegate"
+require "uri"
 require "cartographer/version"
+require "cartographer/url"
 
-module Cartographer
-  # Your code goes here...
-end
