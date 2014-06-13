@@ -33,8 +33,7 @@ module Anaximander
 
     attr_reader :root
 
-    def initialize(root, options={})
-      @root  = root
+    def initialize(options={})
       @color = options.fetch(:color, true)
     end
 

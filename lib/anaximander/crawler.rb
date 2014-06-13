@@ -1,10 +1,10 @@
 module Anaximander
   class Crawler
-    attr_reader :root
+    attr_reader :url, :root
 
     def initialize(url)
-      url      = url.chomp("/")
-      @root    = Page.new(url)
+      @url = url.chomp("/")
+      @root = Page.new(url)
       @visited = [url]
     end
 

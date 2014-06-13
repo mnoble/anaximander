@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 require "anaximander"
+require "anaximander/cli"
 Anaximander.logger = false
-crawler = Anaximander::Crawler.new(ARGV[0])
-crawler.crawl
-renderer = Anaximander::Renderer.new(crawler.root)
-renderer.draw
+Anaximander::CLI.start

@@ -6,7 +6,7 @@ describe Anaximander::Renderer do
   let(:child) { double(url: "http://example.com/foo", assets: ["/root.css", "/child.js"], children: []) }
   let(:root)  { double(url: "http://example.com", assets: ["/root.css"], children: [child]) }
 
-  subject(:renderer) { described_class.new(root, color: false) }
+  subject(:renderer) { described_class.new(color: false) }
 
   before :all do
     Fakeout.activate!
@@ -47,8 +47,8 @@ describe Anaximander::Renderer do
 
     domain = Anaximander::Url.new(tree.root.url).base
 
-    renderer = Anaximander::Renderer.new(tree.root, color: false)
-    renderer.draw
+    renderer = Anaximander::Renderer.new(color: false)
+    renderer.draw(tree.root)
 
     expect(stdout).to eq <<-TREE
 └── #{domain}/index.html ["/main.css", "/application.js"]
