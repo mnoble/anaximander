@@ -1,24 +1,42 @@
 # Anaximander
 
-TODO: Write a gem description
+Anaximander is a small library for crawling a website and rendering the
+resulting site map to the console.
 
-## Installation
+## Installation &amp; Usage
 
-Add this line to your application's Gemfile:
+```sh
+gem install anaximander
+```
 
-    gem 'anaximander'
+```sh
+mapgen <url>
+```
 
-And then execute:
+## Running Tests
 
-    $ bundle
+```sh
+bundle install
+bundle exec rspec spec
+```
 
-Or install it yourself as:
+### End to End Tests
 
-    $ gem install anaximander
+There are two tests marked with the tag `endtoend`. These tests start up
+a Rack app which serves a simple website and run against that server
+like the library would in "production". Think of them as the Acceptance
+tests for a library.
 
-## Usage
+The end to end tests are run by default. To exclude them:
 
-TODO: Write usage instructions here
+```sh
+bundle exec rspec spec --tag ~endtoend
+```
+
+## What does Anaximander mean?
+
+Anaximander was a Greek cartographer who was the first person to try to
+map the entire world.
 
 ## Contributing
 
