@@ -8,6 +8,7 @@ require "logger"
 require "cartographer/version"
 require "cartographer/url"
 require "cartographer/page"
+require "cartographer/crawler"
 require "cartographer/discovery/links"
 require "cartographer/discovery/assets"
 
