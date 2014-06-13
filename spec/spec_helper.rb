@@ -4,8 +4,6 @@ require "fakeout/safe"
 require "anaximander"
 
 RSpec.configure do |c|
-  c.filter_run_excluding :endtoend
-
   c.before do
     Anaximander.logger = false
   end
