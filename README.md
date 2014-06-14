@@ -1,3 +1,5 @@
+![](https://travis-ci.org/mnoble/anaximander.svg?branch=master)
+
 # Anaximander
 
 Anaximander is a small library for crawling a website and rendering the
