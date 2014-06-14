@@ -1,4 +1,5 @@
-![](https://travis-ci.org/mnoble/anaximander.svg?branch=master)
+![](https://travis-ci.org/mnoble/anaximander.svg?branch=master) &nbsp;
+[![CodeClimate](https://codeclimate.com/github/mnoble/anaximander.png)](https://codeclimate.com/github/mnoble/anaximander)
 
 # Anaximander
 
