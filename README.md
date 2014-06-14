@@ -15,6 +15,12 @@ gem install anaximander
 mapgen <url>
 ```
 
+## Example Site
+
+```sh
+mapgen http://anaximander.herokuapp.com/index.html
+```
+
 ## Running Tests
 
 ```sh
